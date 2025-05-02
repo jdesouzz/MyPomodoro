@@ -1,18 +1,15 @@
-/*import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-interface Props {
-    font: string;
-    seconds: number;
+interface TimerProps {
+    initialSeconds: number; // Initial time in seconds
+    timerState: boolean; // Whether the timer is running
 }
 
-function Timer({font, seconds} : Props) {
-    return ( 
-        <div className="timer" style={{fontFamily: font}}>
-            {Math.ceil(seconds / 60)}:{(seconds % 60).toString().padStart(1, '0')}
-        </div>
-    )
+function Timer({ initialSeconds, timerState }: TimerProps) {
+    const [seconds, setSeconds] = useState(initialSeconds);
+
+    
+
 }
 
-
-export default Timer;*/
+export default Timer;
